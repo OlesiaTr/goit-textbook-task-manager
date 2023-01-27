@@ -11,7 +11,7 @@ const tasksInitialState = [
 ];
 // Only gets the tasks property updated
 // Now the value of the state parameter will be an array of tasks
-const tasksReducer = (state = tasksInitialState, action) => {
+export const tasksReducer = (state = tasksInitialState, action) => {
   switch (action.type) {
     case "tasks/addTask":
       return [...state, action.payload];
@@ -34,7 +34,7 @@ const filtersInitialState = {
 };
 // Only gets the filters property updated
 // Now the value of the state parameter will be the filters object
-const filtersReducer = (state = filtersInitialState, action) => {
+export const filtersReducer = (state = filtersInitialState, action) => {
   switch (action.type) {
     case "filters/setStatusFilter":
       return {
@@ -45,8 +45,3 @@ const filtersReducer = (state = filtersInitialState, action) => {
       return state;
   }
 };
-
-export const rootReducer = combineReducers({
-  tasks: tasksReducer,
-  filters: filtersReducer,
-});
