@@ -1,6 +1,6 @@
 // Core
 import { useDispatch } from "react-redux";
-import { addTask } from "redux/actions";
+import { addTask } from "redux/tasksSlice";
 
 // Components
 import { Button } from "components/Button/Button";

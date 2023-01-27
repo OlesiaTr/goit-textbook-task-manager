@@ -1,6 +1,6 @@
 // Core
 import { useDispatch } from 'react-redux';
-import { deleteTask,toggleCompleted } from 'redux/actions';
+import { deleteTask,toggleCompleted } from 'redux/tasksSlice';
 
 // Utils
 import { MdClose } from "react-icons/md";
