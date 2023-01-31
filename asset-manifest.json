@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/goit-textbook-task-manager/static/css/main.9ce390fb.css",
-    "main.js": "/goit-textbook-task-manager/static/js/main.65ed3f2f.js",
+    "main.js": "/goit-textbook-task-manager/static/js/main.02da6e89.js",
     "index.html": "/goit-textbook-task-manager/index.html",
     "main.9ce390fb.css.map": "/goit-textbook-task-manager/static/css/main.9ce390fb.css.map",
-    "main.65ed3f2f.js.map": "/goit-textbook-task-manager/static/js/main.65ed3f2f.js.map"
+    "main.02da6e89.js.map": "/goit-textbook-task-manager/static/js/main.02da6e89.js.map"
   },
   "entrypoints": [
     "static/css/main.9ce390fb.css",
-    "static/js/main.65ed3f2f.js"
+    "static/js/main.02da6e89.js"
   ]
 }
