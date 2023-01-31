@@ -1,12 +1,12 @@
 // Core
 import { useDispatch } from 'react-redux';
-import { deleteTask,toggleCompleted } from 'redux/tasksSlice';
+import { deleteTask, toggleCompleted } from 'redux/operations';
 
 // Utils
-import { MdClose } from "react-icons/md";
+import { MdClose } from 'react-icons/md';
 
 // Styles
-import css from "./Task.module.css";
+import css from './Task.module.css';
 
 export const Task = ({ task }) => {
   const dispatch = useDispatch();
@@ -15,9 +15,9 @@ export const Task = ({ task }) => {
   // Send the result - task delete action
   const handleDelete = () => dispatch(deleteTask(task.id));
 
-   // Call the action generator and pass the task ID
+  // Call the action generator and pass the task ID
   // Send the result - action to switch task status
-  const handleToggle = () => dispatch(toggleCompleted(task.id));
+  const handleToggle = () => dispatch(toggleCompleted(task));
 
   return (
     <div className={css.wrapper}>
