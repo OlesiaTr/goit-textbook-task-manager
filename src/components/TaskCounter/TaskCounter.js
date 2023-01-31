@@ -1,31 +1,18 @@
 // Core
-import { useSelector } from "react-redux";
-import { getTasks } from "redux/selectors";
+import { useSelector } from 'react-redux';
+import { selectTaskCount } from 'redux/selectors';
 
 // Styles
-import css from "./TaskCounter.module.css";
+import css from './TaskCounter.module.css';
 
 export const TaskCounter = () => {
   // Get an array of tasks from the Redux state
-  const tasks = useSelector(getTasks);
-
-    // Based on the Redux state, get derived data
-  const count = tasks.reduce(
-    (acc, task) => {
-      if (task.completed) {
-        acc.completed += 1;
-      } else {
-        acc.active += 1;
-      }
-      return acc;
-    },
-    { active: 0, completed: 0 }
-  );
+  const { active, completed } = useSelector(selectTaskCount);
 
   return (
     <div>
-      <p className={css.text}>Active: {count.active }</p>
-      <p className={css.text}>Completed: {count.completed }</p>
+      <p className={css.text}>Active: {active}</p>
+      <p className={css.text}>Completed: {completed}</p>
     </div>
   );
 };
