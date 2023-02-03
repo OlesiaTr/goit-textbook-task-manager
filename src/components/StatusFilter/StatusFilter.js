@@ -1,8 +1,8 @@
 // Core
 import { useSelector, useDispatch } from 'react-redux';
-import { statusFilters } from 'redux/constants';
-import { selectStatusFilter } from 'redux/selectors';
-import { setStatusFilter } from 'redux/filtersSlice';
+import { statusFilters } from 'redux/references/constants';
+import { selectStatusFilter } from 'redux/references/selectors';
+import { setStatusFilter } from 'redux/references/filtersSlice';
 
 // Components
 import { Button } from 'components/Button/Button';

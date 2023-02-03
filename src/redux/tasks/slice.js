@@ -1,6 +1,7 @@
 // Core
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { addTask, deleteTask, fetchTasks, toggleCompleted } from './operations';
+import { logOut } from 'redux/auth/operations';
+import { addTask, deleteTask, fetchTasks } from './operations';
 
 // const handlePending = state => {
 //   state.isLoading = true;
@@ -60,40 +61,17 @@ import { addTask, deleteTask, fetchTasks, toggleCompleted } from './operations';
 
 // export const tasksReducer = tasksSlice.reducer;
 
-const extraActions = [fetchTasks, addTask, deleteTask, toggleCompleted];
+const extraActions = [fetchTasks, addTask, deleteTask];
 
 const getActions = type => isAnyOf(...extraActions.map(action => action[type]));
-
-const fetchTasksFulfilledReducer = (state, action) => {
-  state.items = action.payload;
-};
-
-const addTaskFulfilledReducer = (state, action) => {
-  state.items.push(action.payload);
-};
-
-const deleteTaskFulfilledReducer = (state, action) => {
-  const index = state.items.findIndex(task => task.id === action.payload.id);
-  state.items.splice(index, 1);
-};
-
-const toggleCompletedFulfilledReducer = (state, action) => {
-  const index = state.items.findIndex(task => task.id === action.payload.id);
-  state.items.splice(index, 1, action.payload);
-};
 
 const anyPendingReducer = state => {
   state.isLoading = true;
 };
 
-const anyRejectedReducer = (state, action) => {
+const anyRejectedReducer = (state, { payload }) => {
   state.isLoading = false;
-  state.error = action.payload;
-};
-
-const anyFulfilledReducer = state => {
-  state.isLoading = false;
-  state.error = null;
+  state.error = payload;
 };
 
 const tasksSlice = createSlice({
@@ -105,13 +83,29 @@ const tasksSlice = createSlice({
   },
   extraReducers: builder =>
     builder
-      .addCase(fetchTasks.fulfilled, fetchTasksFulfilledReducer)
-      .addCase(addTask.fulfilled, addTaskFulfilledReducer)
-      .addCase(deleteTask.fulfilled, deleteTaskFulfilledReducer)
-      .addCase(toggleCompleted.fulfilled, toggleCompletedFulfilledReducer)
+      .addCase(fetchTasks.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = payload;
+      })
+      .addCase(addTask.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items.push(payload);
+      })
+      .addCase(deleteTask.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = null;
+        const index = state.items.findIndex(({ id }) => id === payload.id);
+        state.items.splice(index, 1);
+      })
+      .addCase(logOut.fulfilled, state => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
+      })
       .addMatcher(getActions('pending'), anyPendingReducer)
-      .addMatcher(getActions('rejected'), anyRejectedReducer)
-      .addMatcher(getActions('fulfilled'), anyFulfilledReducer),
+      .addMatcher(getActions('rejected'), anyRejectedReducer),
 });
 
 export const tasksReducer = tasksSlice.reducer;

@@ -1,8 +1,8 @@
 // Core
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectError, selectIsLoading } from 'redux/selectors';
-import { fetchTasks } from 'redux/operations';
+import { selectError, selectIsLoading } from 'redux/references/selectors';
+import { fetchTasks } from 'redux/tasks/operations';
 
 // Components
 import { Layout } from 'components/Layout/Layout';

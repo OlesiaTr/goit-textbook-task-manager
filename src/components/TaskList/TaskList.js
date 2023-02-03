@@ -1,6 +1,6 @@
 // Core
 import { useSelector } from 'react-redux';
-import { selectVisibleTasks } from 'redux/selectors';
+import { selectVisibleTasks } from 'redux/references/selectors';
 
 // Components
 import { Task } from 'components/Task/Task';
