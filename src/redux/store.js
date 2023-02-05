@@ -33,7 +33,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { storage } from 'redux-persist/lib/storage';
+import storage from 'redux-persist/lib/storage';
 import { tasksReducer } from './tasks/slice';
 import { authReducer } from './auth/slice';
 

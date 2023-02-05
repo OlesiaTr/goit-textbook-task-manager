@@ -1,46 +1,46 @@
-// Core
-import { useSelector, useDispatch } from 'react-redux';
-import { statusFilters } from 'redux/references/constants';
-import { selectStatusFilter } from 'redux/references/selectors';
-import { setStatusFilter } from 'redux/references/filtersSlice';
+// // Core
+// import { useSelector, useDispatch } from 'react-redux';
+// import { statusFilters } from 'redux/references/constants';
+// import { selectStatusFilter } from 'redux/references/selectors';
+// import { setStatusFilter } from 'redux/references/filtersSlice';
 
-// Components
-import { Button } from 'components/Button/Button';
+// // Components
+// import { Button } from 'components/Button/Button';
 
-// Styles
-import css from './StatusFilter.module.css';
+// // Styles
+// import css from './StatusFilter.module.css';
 
-export const StatusFilter = () => {
-  // Get a link to the action dispatch function
-  const dispatch = useDispatch();
+// export const StatusFilter = () => {
+//   // Get a link to the action dispatch function
+//   const dispatch = useDispatch();
 
-  // Get filter value from Redux state
-  const filter = useSelector(selectStatusFilter);
+//   // Get filter value from Redux state
+//   const filter = useSelector(selectStatusFilter);
 
-  //  Call the action generator and pass the filter value
-  // Sending the result - filter change action
-  const handleFilterChange = filter => dispatch(setStatusFilter(filter));
+//   //  Call the action generator and pass the filter value
+//   // Sending the result - filter change action
+//   const handleFilterChange = filter => dispatch(setStatusFilter(filter));
 
-  return (
-    <div className={css.wrapper}>
-      <Button
-        selected={filter === statusFilters.all}
-        onClick={() => handleFilterChange(statusFilters.all)}
-      >
-        All
-      </Button>
-      <Button
-        selected={filter === statusFilters.active}
-        onClick={() => handleFilterChange(statusFilters.active)}
-      >
-        Active
-      </Button>
-      <Button
-        selected={filter === statusFilters.completed}
-        onClick={() => handleFilterChange(statusFilters.completed)}
-      >
-        Completed
-      </Button>
-    </div>
-  );
-};
+//   return (
+//     <div className={css.wrapper}>
+//       <Button
+//         selected={filter === statusFilters.all}
+//         onClick={() => handleFilterChange(statusFilters.all)}
+//       >
+//         All
+//       </Button>
+//       <Button
+//         selected={filter === statusFilters.active}
+//         onClick={() => handleFilterChange(statusFilters.active)}
+//       >
+//         Active
+//       </Button>
+//       <Button
+//         selected={filter === statusFilters.completed}
+//         onClick={() => handleFilterChange(statusFilters.completed)}
+//       >
+//         Completed
+//       </Button>
+//     </div>
+//   );
+// };
