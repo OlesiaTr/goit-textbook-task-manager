@@ -1,13 +1,33 @@
 {
   "files": {
-    "main.css": "/goit-textbook-task-manager/static/css/main.9ce390fb.css",
-    "main.js": "/goit-textbook-task-manager/static/js/main.02da6e89.js",
+    "main.css": "/goit-textbook-task-manager/static/css/main.3929edb5.css",
+    "main.js": "/goit-textbook-task-manager/static/js/main.10cc0feb.js",
+    "static/css/936.49723c70.chunk.css": "/goit-textbook-task-manager/static/css/936.49723c70.chunk.css",
+    "static/js/936.5442ad4b.chunk.js": "/goit-textbook-task-manager/static/js/936.5442ad4b.chunk.js",
+    "static/css/813.2845367d.chunk.css": "/goit-textbook-task-manager/static/css/813.2845367d.chunk.css",
+    "static/js/813.6d7a9f8a.chunk.js": "/goit-textbook-task-manager/static/js/813.6d7a9f8a.chunk.js",
+    "static/css/815.177c5058.chunk.css": "/goit-textbook-task-manager/static/css/815.177c5058.chunk.css",
+    "static/js/815.a2ed9a60.chunk.js": "/goit-textbook-task-manager/static/js/815.a2ed9a60.chunk.js",
+    "static/css/166.ba79e2b6.chunk.css": "/goit-textbook-task-manager/static/css/166.ba79e2b6.chunk.css",
+    "static/js/166.9baba030.chunk.js": "/goit-textbook-task-manager/static/js/166.9baba030.chunk.js",
+    "static/js/270.dc9e8005.chunk.js": "/goit-textbook-task-manager/static/js/270.dc9e8005.chunk.js",
+    "static/js/322.db226529.chunk.js": "/goit-textbook-task-manager/static/js/322.db226529.chunk.js",
     "index.html": "/goit-textbook-task-manager/index.html",
-    "main.9ce390fb.css.map": "/goit-textbook-task-manager/static/css/main.9ce390fb.css.map",
-    "main.02da6e89.js.map": "/goit-textbook-task-manager/static/js/main.02da6e89.js.map"
+    "main.3929edb5.css.map": "/goit-textbook-task-manager/static/css/main.3929edb5.css.map",
+    "main.10cc0feb.js.map": "/goit-textbook-task-manager/static/js/main.10cc0feb.js.map",
+    "936.49723c70.chunk.css.map": "/goit-textbook-task-manager/static/css/936.49723c70.chunk.css.map",
+    "936.5442ad4b.chunk.js.map": "/goit-textbook-task-manager/static/js/936.5442ad4b.chunk.js.map",
+    "813.2845367d.chunk.css.map": "/goit-textbook-task-manager/static/css/813.2845367d.chunk.css.map",
+    "813.6d7a9f8a.chunk.js.map": "/goit-textbook-task-manager/static/js/813.6d7a9f8a.chunk.js.map",
+    "815.177c5058.chunk.css.map": "/goit-textbook-task-manager/static/css/815.177c5058.chunk.css.map",
+    "815.a2ed9a60.chunk.js.map": "/goit-textbook-task-manager/static/js/815.a2ed9a60.chunk.js.map",
+    "166.ba79e2b6.chunk.css.map": "/goit-textbook-task-manager/static/css/166.ba79e2b6.chunk.css.map",
+    "166.9baba030.chunk.js.map": "/goit-textbook-task-manager/static/js/166.9baba030.chunk.js.map",
+    "270.dc9e8005.chunk.js.map": "/goit-textbook-task-manager/static/js/270.dc9e8005.chunk.js.map",
+    "322.db226529.chunk.js.map": "/goit-textbook-task-manager/static/js/322.db226529.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ce390fb.css",
-    "static/js/main.02da6e89.js"
+    "static/css/main.3929edb5.css",
+    "static/js/main.10cc0feb.js"
   ]
 }
